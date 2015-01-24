@@ -1,0 +1,6 @@
+config		-> É a pasta que contem o arquivo de configuração do projeto
+initialize	-> É a pasta do scripts que serão lidos antes da execução da engine,feito para se colocar informação globais;
+resources	-> É a pasta onde os recursos de imagens, áudios, partículas, fontes e billing serão adicionados e configurados
+scenes		-> É a pasta onde os scripts de: telas, objetos, afins serão colocados e configurados
+
+

@@ -1,0 +1,7 @@
+
+-main.lua	-> arquivo main da aplicação, para executar um jogo basta mudar a variável _Project na linha 1.
+-core	 	-> folder onde as funções da Framework são guardadas.
+-project	-> folder onde OS JOGOS e seus recursos são guardados.-run_osx.sh 	-> arquivo para execução no mac.-run_windows.bat-> arquivo para execução no windows.
+
+
+Recomendamos que abra a pasta project com o Editor Sublime Text 2, mas vc pode usar a ferramenta que mais lhe agradar “mas eu só vou fazer auto-coplete e highlight pro sublime u.u”
