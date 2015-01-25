@@ -1,5 +1,6 @@
-image = 'balloonBalloon'
-size  = { 60, 80 }
+image = 'balloons'
+scale = .1
+size  = { 425 * scale, 956 * .09 }
 
 _type = config.type
 red, blue, green = nil
@@ -15,11 +16,9 @@ end
 
 self:setColor ( red, green, blue, 100)
 
-tagCollision = "balloon"
-
 bodyInfo = {
-	type 		= "kinematic",
-	sensor 		= true,
+	type 		= "dynamic",
+	sensor 		= false,
 	mass 	  	= 0,
 	restitution = 0,
 	friction 	= 0,
@@ -27,14 +26,13 @@ bodyInfo = {
 
 	shape = {
 		box     = nil,
-		circle  = {10,0},
+		circle  = { 20, 0 },
 		polygon = nil
 	},
 	filter = {
 		box     = nil,
 		circle  = nil,
 		polygon = nil
-
 	},
 	mask   = {
 		box     = nil, 
@@ -42,3 +40,4 @@ bodyInfo = {
 		polygon = nil
 	}
 }
+

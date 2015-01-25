@@ -155,6 +155,16 @@ function calcDist ( objI, objII, type )
 	end
 end
 
+function calcDistPos ( objI, objII, type )
+	local x1,y1 = objI:getPos ()
+	local x2,y2 = objII[1], objII[2]
+	if type then
+		return math.sqrt ( math.pow ( x2 - x1, 2 ) ), math.sqrt ( math.pow ( y2 - y1, 2 ) )
+	else
+		return math.sqrt ( math.pow ( x2 - x1, 2 ) + math.pow ( y2-y1, 2 ))
+	end
+end
+
 function calcMidDist ( objI, objII )
 	local xI, yI   = objI:getPos ()
 	local xII, yII = objII:getPos ()

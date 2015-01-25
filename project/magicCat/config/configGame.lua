@@ -2,7 +2,7 @@
 viewConfig = {
 	size   		  = { width = 960, height = 640 },
 	scale  		  = { width = 480, height = 320 },
-	title  		  = "Who Are You?!"
+	title  		  = "Magic Cat <3"
 }
 
 -- [[ Configurações do Projeto ]]
@@ -12,7 +12,7 @@ projectConfig = {
 	layersToPause = { 1, 2, 3, 4, 5, 6, 7, 8 },
 	defaultFont   = "ArialRounded",
 	playReload	  = false,
-	openScene 	  = "SCIntro"--Balloons"--Intro"
+	openScene 	  = "SCBalloons"--Intro"--Balloons"--Intro"
 }
 
 -- [[ configuração da Física ]]
@@ -26,7 +26,7 @@ worldConfig = {
 debugConfig = {
 	screen 		  = false,
 	lines  		  = false,
-	psychs		  = false,
+	psychs		  = true,
 	printing  	  = false,
 	events 		  = false,
 	useful	      = false

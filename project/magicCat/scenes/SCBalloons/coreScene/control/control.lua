@@ -1,12 +1,15 @@
 function onStart ()
-	self:addEventLoop ( 100 , function ()
-		onUpdate ( 16 )
-	end )
+	g.ost:fadeEffect ( "in", 1000)
+	g.fade.fadeOff (100, function () 
+		g.start = true
+		self:addEventLoop ( 16, function ()
+			 onUpdate ( 16 )
+		end )
+	end)
 end
 
 maxTime = 500
 time    = 0
-change  = false
 
 function onUpdate ( _time )
 	time = time + _time
@@ -15,11 +18,11 @@ function onUpdate ( _time )
 		maxTime = math.random ( 100, 300 )
 		if g.baloon == 0 then
 			g.baloon = 5
-			scene:addGameObject ( "balloon", 3, math.random(-220,-120),  math.random(-240, -160), { type = math.random ( 3 ), vel = math.random ( 3, 5 ) } )
-			scene:addGameObject ( "balloon", 3, math.random(-80,   40),  math.random(-200, -180), { type = math.random ( 3 ), vel = math.random ( 3, 5 ) } )
-			scene:addGameObject ( "balloon", 3, math.random( 80,  220),  math.random(-240, -160), { type = math.random ( 3 ), vel = math.random ( 3, 5 ) } )
-			scene:addGameObject ( "balloon", 3, math.random(-120, -20),  math.random(-300, -280), { type = math.random ( 3 ), vel = math.random ( 3, 5 ) } )
-			scene:addGameObject ( "balloon", 3, math.random( 20,  120),  math.random(-320, -300), { type = math.random ( 3 ), vel = math.random ( 3, 5 ) } )
+			scene:addGameObject ( "balloon", 3, 0,  0, { type = math.random ( 3 ), vel = math.random ( 3, 5 ) } )
+			-- scene:addGameObject ( "balloon", 3, math.random(-80,   40),  math.random(-240, -220), { type = math.random ( 3 ), vel = math.random ( 3, 5 ) } )
+			-- scene:addGameObject ( "balloon", 3, math.random( 80,  220),  math.random(-260, -200), { type = math.random ( 3 ), vel = math.random ( 3, 5 ) } )
+			-- scene:addGameObject ( "balloon", 3, math.random(-120, -20),  math.random(-300, -280), { type = math.random ( 3 ), vel = math.random ( 3, 5 ) } )
+			-- scene:addGameObject ( "balloon", 3, math.random( 20,  120),  math.random(-320, -300), { type = math.random ( 3 ), vel = math.random ( 3, 5 ) } )
 		end
 	end
 end

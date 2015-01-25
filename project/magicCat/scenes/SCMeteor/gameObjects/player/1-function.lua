@@ -46,7 +46,7 @@ function onUpdate ( frameTime )
 
 		angle = lookAtPos ( self, { self:getPos ( "x" ) + sx, self:getPos ( "y" ) + sy } )
 		self:setAngle ( angle )
-		self:addPos ( velocity * nx, velocity * ny )
+		-- self:addPos ( velocity * nx, velocity * ny )
 	elseif not g.finish and g.over then
 		smallDeath ()
 	end
@@ -95,6 +95,7 @@ function onAccelerometer ( x, y, z )
 end
 
 function onCollision ( objA, objB, type )
+	print (type)
 	if not g.finish and not g.over and g.start then
 		if objB ~= nil and type == "collision BEGIN" then
 			if objB.tag == "bullet" then

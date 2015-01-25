@@ -1,21 +1,24 @@
 -- [[ config GameObject ]]
 image = 'balloonKnife'
-size = { 15,25 }
-limitX = config.limitX
-limitY = config.limitY
+scale = .1
+size = { 50 * scale ,220 * scale  }
 
--- [[ GameObject Body Info  ]]
+_target   = config[1]
+_left     = config[2]
+_velocity = 25 
+_tag 	  = "knife"
+
 bodyInfo = {
-	type 		= "kinematic",
-	sensor 		= false,
+	type 		= "dynamic",
+	sensor 		= true,
 	mass 	  	= 0,
 	restitution = 0,
 	friction 	= 0,
 	density		= 0,
 
 	shape = {
-		box     = { -size[1]/2, -size[2]/2, size[1]/2, size[2]/2 },
-		circle  = nil,
+		box     = nil,
+		circle  = { 5, 0 },
 		polygon = nil
 	},
 	filter = {

@@ -712,14 +712,16 @@ function azClassGameObject:setFlip ( direction )
 	if self.body.shape ~= nil and self.body.polygon.have then
 	
 	end
+
+	local x, y = self:getProp ():getScl () 
 	if direction == 'left' then
-		self:getProp ():setScl ( 1, self:getProp ():getScl () )
+		self:getProp ():setScl ( 1, y)
 	elseif direction == 'right' then
-		self:getProp ():setScl ( -1, self:getProp ():getScl () )
+		self:getProp ():setScl ( -1, y )
 	elseif direction == 'up' then
-		self:getProp ():setScl ( self:getProp ():getScl (), -1 )
+		self:getProp ():setScl ( x, -1 )
 	elseif direction == 'down' then
-		self:getProp ():setScl ( self:getProp ():getScl (),  1 )
+		self:getProp ():setScl ( x,  1 )
 	end
 end
 

@@ -18,6 +18,7 @@ azCoreGlobal.coreFunctions = {
 	RESTART 	   = RESTART,
 	calcMidDist    = calcMidDist,
 	calcDist       = calcDist,
+	calcDistPos    = calcDistPos,
 	isAbove        = isAbove,
 	lookAt	       = lookAt,
 	lookAtPos	   = lookAtPos, 
