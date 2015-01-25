@@ -46,7 +46,7 @@ function onUpdate ( frameTime )
 
 		angle = lookAtPos ( self, { self:getPos ( "x" ) + sx, self:getPos ( "y" ) + sy } )
 		self:setAngle ( angle )
-		-- self:addPos ( velocity * nx, velocity * ny )
+		self:addPos ( velocity * nx, velocity * ny )
 	elseif not g.finish and g.over then
 		smallDeath ()
 	end
@@ -95,7 +95,6 @@ function onAccelerometer ( x, y, z )
 end
 
 function onCollision ( objA, objB, type )
-	print (type)
 	if not g.finish and not g.over and g.start then
 		if objB ~= nil and type == "collision BEGIN" then
 			if objB.tag == "bullet" then
@@ -108,6 +107,7 @@ function onCollision ( objA, objB, type )
 							g.finish = true
 						end
 					else
+						G.effect_damage:play ()
 						g.count = 0
 						g.score:setText ("score: "..g.count)
 					end
@@ -119,6 +119,10 @@ end
 
 function smallDeath ()
 	_scale = 1
+	if _fall == nil then
+		_fall = true
+		G.effect_fall:play()
+	end
 	for i = 1, 11, 1 do
 		self:addEvent ( 150 * i, function ()
 			if _scale > 0.1 then
@@ -130,6 +134,7 @@ function smallDeath ()
 				g.count = 0
 				accel_x, accel_y = 0, 0
 				g.over  = false
+				_fall   = nil
 			end
 		end )
 	end

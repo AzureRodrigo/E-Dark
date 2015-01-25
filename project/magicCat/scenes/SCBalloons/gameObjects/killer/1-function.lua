@@ -25,6 +25,7 @@ function onUpdate ( frameTime )
 			if _left then dir = -1
 			else dir = 1 end
 			scene:addGameObject ( "knife", 4, 25 * dir, -105, { _target, _left } )
+			G.effect_knife:play ()
 			_shotting = false
 		end
 	else

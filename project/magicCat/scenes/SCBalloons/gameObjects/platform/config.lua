@@ -1,3 +1,4 @@
 -- [[ config GameObject ]]
 image = 'balloonPlatform' 
-size = { 200,200}
+scale = .35
+size = { 300 * scale, 300 * scale }

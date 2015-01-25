@@ -18,7 +18,7 @@ bodyInfo = {
 
 	shape = {
 		box     = nil,
-		circle  = { 5, 0 },
+		circle  = { 5, 0, 5 },
 		polygon = nil
 	},
 	filter = {

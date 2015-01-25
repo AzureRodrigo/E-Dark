@@ -335,6 +335,14 @@ function azClassGameObject:internalOnAdd ()
 	for _, file in ipairs ( files ) do
 		doFileSandbox ( self, file )
 	end
+
+
+	if self.onStart ~= nil then
+		self.onStart ()
+	end
+	if self.onCollision ~= nil then
+		self:bodyCollide ( self.onCollision )
+	end
 end
 
 function azClassGameObject:internalUpdate ( time )

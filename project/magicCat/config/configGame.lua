@@ -12,7 +12,7 @@ projectConfig = {
 	layersToPause = { 1, 2, 3, 4, 5, 6, 7, 8 },
 	defaultFont   = "ArialRounded",
 	playReload	  = false,
-	openScene 	  = "SCBalloons"--Intro"--Balloons"--Intro"
+	openScene 	  = "SCIntro"--"SCIntro""SCBalloons""SCIntro""SCMeteor"
 }
 
 -- [[ configuração da Física ]]
@@ -26,7 +26,7 @@ worldConfig = {
 debugConfig = {
 	screen 		  = false,
 	lines  		  = false,
-	psychs		  = true,
+	psychs		  = false,
 	printing  	  = false,
 	events 		  = false,
 	useful	      = false

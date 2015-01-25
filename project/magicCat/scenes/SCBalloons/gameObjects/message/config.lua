@@ -1,4 +1,4 @@
 -- [[ config GameObject ]]
 image = 'balloonMessage' 
-size = { 20,20}
+size = { 10, 10 }
 isCorrect = false

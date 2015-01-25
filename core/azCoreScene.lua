@@ -102,15 +102,14 @@ function azSceneClass:internalStart ()
 			modulo.onStart ()
 		end
 	end
-	
-	for thing in lpairs(self.things) do
-		if thing.onStart ~= nil then
-			thing.onStart ()
-		end
-		if thing.onCollision ~= nil then
-			thing:bodyCollide ( thing.onCollision )
-		end
-	end
+	-- for thing in lpairs(self.things) do
+	-- 	if thing.onStart ~= nil then
+	-- 		thing.onStart ()
+	-- 	end
+	-- 	if thing.onCollision ~= nil then
+	-- 		thing:bodyCollide ( thing.onCollision )
+	-- 	end
+	-- end
 end
 
 function azSceneClass:internalUpdate ( time )

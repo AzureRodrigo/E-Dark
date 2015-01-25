@@ -1,5 +1,5 @@
 function onStart ()
-	-- self:setBullet (true)
+	self:setBullet (true)
 	self:setGravityScale (0)
 	angle = lookAt ( self, _target )
 	self:setAngle ( angle )
@@ -7,7 +7,7 @@ end
 
 onStart ()
 
-future = 40
+future = 50
 
 function onUpdate ()	
 	angle = lookAt ( self, _target )

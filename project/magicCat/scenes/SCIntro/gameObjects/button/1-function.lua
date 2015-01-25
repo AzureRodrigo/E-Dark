@@ -18,6 +18,7 @@ end
 function onTouchDown ( id, pointerPos, screenPos, time )
 	if isActive and clicked == nil then
 		self:setColor ( 100, 100, 100, 50 )
+		G.effect_btn:play()
 		title:setSelect ( config.selectColor )
 		clicked = true
 		config.funcDown ()

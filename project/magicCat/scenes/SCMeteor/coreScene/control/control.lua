@@ -34,6 +34,7 @@ function onUpdate ( _time )
 	 	if rY == 0 then rY = 1 end
 
 		scene:addGameObject ( "bullet", 1, ( x + etX ) * rX, ( etY + y ) * rY, { color = math.random (4) } )
+		G.effect_cat:play ()
 	elseif g.finish and not change then
 		change = true
 		g.ost:fadeEffect ( "out", 1000)

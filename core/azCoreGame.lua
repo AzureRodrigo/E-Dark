@@ -217,6 +217,7 @@ end
 
 function azCoreGame:changeScene ( time, name, params, shouldStopmainScene )
 	self:addEvent ( time, function ()
+		self:setPosCamera  ( 0, 0 )
 		self:switchScene ( name, params, shouldStopmainScene )		
 	end)	
 end
@@ -229,12 +230,10 @@ function azCoreGame:switchScene ( name, params, shouldStopmainScene )
 	if self.mainScene ~= nil then		
 		if ( shouldStopmainScene == nil or shouldStopmainScene ) then
 			self.mainScene:internalStop ()
-			--adicionar o fade in
 		end
 	end
 	self.mainScene = azCoreSceneModules:loadScene ( name, params, true )
 	if self.mainScene ~= nil then
-		--adicionar o fade off
 		self.mainScene:internalStart ()
 	end	
 end
