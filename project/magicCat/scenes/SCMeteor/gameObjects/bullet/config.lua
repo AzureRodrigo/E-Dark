@@ -1,6 +1,6 @@
 image = "meteorFireBall"
-scale = .3
-size  = { 180 * scale, 360 * scale }
+scale = .1
+size  = { 355 * scale, 635 * scale }
 tag	  = "bullet"
 velocity = 5
 colorID  = config.color
@@ -17,7 +17,7 @@ else
 	red,green,blue = hexToRgb ( Color.Purple )
 end
 
-self:setColor ( red, green, blue, 1 )
+self:setColor ( red/2, green/2, blue/2, 30 )
 
 bodyInfo = {
 	type 		= "dynamic",

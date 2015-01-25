@@ -1,5 +1,6 @@
 image = "meteorPlayer"
-size  = { 50, 50 }
+scale = .3
+size  = { 200 * scale, 325 * scale }
 
 velocity 	= 3
 limitScreen = {}

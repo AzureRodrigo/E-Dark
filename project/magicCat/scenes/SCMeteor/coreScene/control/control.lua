@@ -1,7 +1,11 @@
 function onStart ()
-	self:addEventLoop ( 100 , function ()
-		onUpdate ( 16 )
-	end )
+	g.ost:fadeEffect ( "in", 1000)
+	g.fade.fadeOff (100, function () 
+		g.start = true
+		self:addEventLoop ( 100 , function ()
+			onUpdate ( 16 )
+		end )
+	end)
 end
 
 function onTouchDown ( id, objectPos, scenePos, time )
@@ -32,6 +36,9 @@ function onUpdate ( _time )
 		scene:addGameObject ( "bullet", 1, ( x + etX ) * rX, ( etY + y ) * rY, { color = math.random (4) } )
 	elseif g.finish and not change then
 		change = true
-		game:changeScene ( 1000, "SCBalloons" )
+		g.ost:fadeEffect ( "out", 1000)
+		g.fade.fadeIn (100, function () 
+			game:changeScene ( 1000, "SCBalloons" )
+		end)
 	end
 end

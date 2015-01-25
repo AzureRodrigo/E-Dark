@@ -20,6 +20,7 @@ azCoreGlobal.coreFunctions = {
 	calcDist       = calcDist,
 	isAbove        = isAbove,
 	lookAt	       = lookAt,
+	lookAtPos	   = lookAtPos, 
 	lookAtMouse    = lookAtMouse,
 	limitScreenOff = limitScreenOff,
 	colorIsEqual   = colorIsEqual,

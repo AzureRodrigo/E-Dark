@@ -1,5 +1,5 @@
 function onUpdate ()
-	self:addPos ( 0, 3 )
+	self:addPos ( 0, _vel )
 	if self:getPos ( "y" ) > 250 then 
 		if not self:getRemove () then
 			if g.baloon > 0 then 

@@ -1,8 +1,7 @@
 function onStart ()
-	-- self:addEvent ( 1000, function ()
-	-- 	fadeIn ()	
-	-- end )
-	scene:addText ( "Magic Cat", 3, 0, 100, 200, 100, Color.Purple, 2, "Anatole" )
+	self:addEvent ( 1000, function ()
+		fadeIn ()	
+	end )
 end
 
 function fadeIn ()

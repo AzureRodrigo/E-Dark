@@ -1,22 +1,18 @@
 sounds = {
-	['bgMain'] = {
-	 	fileName = 'bgMain.ogg',
+	['meteor'] = {
+	 	fileName = 'Gato Pscicopata fase I.wav',
 	 	loop = true,
 	},
-	['bg10'] = {
-	 	fileName = 'game10.ogg',
+	['baloon'] = {
+	 	fileName = 'gato psicopata balão.wav',
 	 	loop = true,
 	},
-	['bg11'] = {
-	 	fileName = 'game11.ogg',
+	['credits'] = {
+	 	fileName = 'Gato psicopata creditos.wav',
 	 	loop = true,
 	},
-	['bg12'] = {
-	 	fileName = 'game12.ogg',
-	 	loop = true,
-	},
-	['bg13'] = {
-	 	fileName = 'game13.ogg',
+	['intro'] = {
+	 	fileName = 'Gato psicopata terror.wav',
 	 	loop = true,
 	},
 }

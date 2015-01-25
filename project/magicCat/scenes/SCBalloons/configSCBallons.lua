@@ -14,7 +14,7 @@ function setModules ()
 end
 
 function setGameObjects ()
-	-- scene:addGameObject ( "bg", 1, 0, 150,  {false, 600, 50} )	
+	scene:addGameObject ( "bg", 1, 0, 150,  {false, 600, 50} )	
 	-- scene:addGameObject ( "platform", 3,   0, -150 )
 	-- scene:addGameObject ( "catknife", 4, -15, -80 )
 	-- scene:addGameObject ( "knife", 4, -25, -80, { limitX = 240, limitY = 160 } )

@@ -1,5 +1,10 @@
 function setVariables ()
 	g.finish = false
+	g.start  = false
+	g.ost    = scene:addSound ( "intro" )	
+	g.ost:setLoop ( true )
+	g.ost:setVolume ( 0 )
+	g.ost:play ()
 end
 
 function setModules ()
@@ -12,7 +17,7 @@ function setGameObjects ()
 	local extra = bg:getSize ( "x" )
 	scene:addGameObject ( "bg", 1, extra, 0 )
 	-- title
-	scene:addGameObject ( "title", 2, 0, 0 )
+	scene:addGameObject ( "title", 2, 0, 80 )
 	-- grass
 	scene:addGameObject ( "grass", 3, 0, 90 )
 	-- cat
@@ -23,14 +28,21 @@ function setGameObjects ()
 	scene:addGameObject ( "tree", 5, -65, 0 )
 	-- play button
 	scene:addGameObject ( "button", 4, -500, -70, {
-		title = "Start",
+		image = "introBtnStart",
+		title = "",
 		selectColor = Color.White,
 		funcDown = function ()
 		end,
 		funcMove = function ()
 		end,
 		funcUp   = function ()
-			game:changeScene ( 1000, "SCMeteor" )
+			if not g.finish then
+				g.finish = true
+				g.ost:fadeEffect ( "out", 1000)
+				g.fade.fadeIn (100, function () 
+					game:changeScene ( 1000, "SCMeteor" )
+				end)
+			end
 		end,
 		time	 = 3,
 		posX	 = 130
@@ -38,20 +50,27 @@ function setGameObjects ()
 	-- credits button
 	scene:addGameObject ( "button", 4, -500, -120, {
 		 -- o quarto paramentro é uma tabela ilimitada {} onde é possivel passar quantos parametros quiser 
-		title = "Credits",
+		image = "introBtnCredits",
+		title = "",
 		selectColor = Color.White,
 		funcDown = function ()
 		end,
 		funcMove = function ()
 		end,
 		funcUp   = function ()
-			-- game:changeScene ( 1000, "SCGame" )
+			if not g.finish then
+				g.finish = true
+				g.ost:fadeEffect ( "out", 1000)
+				g.fade.fadeIn (100, function () 
+					game:changeScene ( 1000, "SCCredits" )
+				end)
+			end
 		end,
 		time	 = 4,
 		posX	 = 130
 	})
 
-
+	g.fade	 = scene:addGameObjectStatic ("fade", 10, 0, 0 )
 end
 
 function onBackButtonPressed () 

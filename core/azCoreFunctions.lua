@@ -171,6 +171,12 @@ function lookAt ( objI, objII )
 	return - math.deg (math.atan2 ( medX, medY ))	
 end
 
+function lookAtPos ( objI, objII )
+    local medX = objII[1] - objI:getPos ("x")
+    local medY = objII[2] - objI:getPos ("y")
+	return - math.deg (math.atan2 ( medX, medY ))	
+end
+
 function lookAtMouse ( pos, objII )
     local medX = pos.x - objII:getPos ("x")
     local medY = pos.y - objII:getPos ("y")

@@ -1,23 +1,22 @@
 image = 'balloonBalloon'
-size  = { 80, 120 }
-typeColor = config.type
-red = nil
-green = nil
-blue = nil
-timeanimation = 0
+size  = { 60, 80 }
 
-if typeColor == 1 then
+_type = config.type
+red, blue, green = nil
+_time = 0
+_vel  = config.vel
+if _type == 1 then
 	red,green,blue = hexToRgb(Color.Red)
-elseif typeColor == 2 then
+elseif _type == 2 then
 	red,green,blue = hexToRgb(Color.Green)
 else
 	red,green,blue = hexToRgb(Color.Blue)
 end
 
-self:setColor ( red, green, blue, 1)
+self:setColor ( red, green, blue, 100)
 
 tagCollision = "balloon"
--- [[ GameObject Body Info  ]]
+
 bodyInfo = {
 	type 		= "kinematic",
 	sensor 		= true,
@@ -35,6 +34,7 @@ bodyInfo = {
 		box     = nil,
 		circle  = nil,
 		polygon = nil
+
 	},
 	mask   = {
 		box     = nil, 
