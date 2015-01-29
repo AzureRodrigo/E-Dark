@@ -1,18 +1,18 @@
 sounds = {
 	['meteor'] = {
-	 	fileName = 'Gato Pscicopata fase I.wav',
+	 	fileName = 'faseI.wav',
 	 	loop = true,
 	},
 	['baloon'] = {
-	 	fileName = 'gato psicopata balão.wav',
+	 	fileName = 'faseII.wav',
 	 	loop = true,
 	},
 	['credits'] = {
-	 	fileName = 'Gato psicopata creditos.wav',
+	 	fileName = 'credits.wav',
 	 	loop = true,
 	},
 	['intro'] = {
-	 	fileName = 'Gato psicopata terror.wav',
+	 	fileName = 'terror.wav',
 	 	loop = true,
 	},
 	['eff_btn'] = {

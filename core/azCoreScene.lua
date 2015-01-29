@@ -242,15 +242,15 @@ function azSceneClass:internalClickMove ( isMove, isLeft, isRight )
 	self:internalTouchControl ( isMove, "move", x, y )
 end
 
-local function executeAccelerometer ( object, x, y, z  )
+local function executeAccelerometer ( object, x, y, z )
 	if not object:getRemove () and not object:getPause () and object:getVisible () then
 		if object.onAccelerometer ~= nil then
-			object.onAccelerometer (  y, z, x  )
+			object.onAccelerometer (  x, y, z  )
 		end
 	end
 end
 
-function azSceneClass:internalAccelerometer ( x, y, z )
+function azSceneClass:internalAccelerometer ( z, x, y )
 	local listObjects = azCoreGame:gatherAllThings ()
 	for _, object in ipairs ( listObjects ) do
 		if object.onAccelerometer ~= nil then

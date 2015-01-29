@@ -21,32 +21,31 @@ function onUpdate ( frameTime )
 		if y + 10 > yI/2 or y - 10 < -yI/2 then
 			g.over = true
 		end
-
-		if accel_x > 0.35 then
-			nx = 1
-			sx = 1
-		elseif accel_x < -0.35 then
+		if accel_x > 3.5 then
 			nx = -1
 			sx = -1
-		elseif accel_x > -0.15 and accel_x < 0.15 then
+		elseif accel_x < -2 then
+			nx = 1
+			sx = 1
+		else --if accel_x > -1.5 and accel_x < 1.5 then
 			sx = nx
 			nx = 0
 		end
 
-		if accel_y > -0.15 then
-			ny = -1
-			sy = -1
-		elseif accel_y < -0.75 then
+		if accel_y > 2.5 then
 			ny = 1
 			sy = 1
-		elseif accel_y > -0.5 and accel_y < -0.1 then
+		elseif accel_y < -2.5 then
+			ny = -1
+			sy = -1
+		else --if accel_y > -0.5 and accel_y < -0.1 then
 			sy = ny
 			ny = 0
 		end
 
-		angle = lookAtPos ( self, { self:getPos ( "x" ) + sx, self:getPos ( "y" ) + sy } )
+		angle = lookAtPos ( self, { self:getPos ( "x" ) + sy, self:getPos ( "y" ) + sx } )
 		self:setAngle ( angle )
-		self:addPos ( velocity * nx, velocity * ny )
+		self:addPos ( velocity * ny, velocity * nx )
 	elseif not g.finish and g.over then
 		smallDeath ()
 	end
