@@ -637,6 +637,10 @@ function azClassGameObject:getColor ()
 	return self.color
 end
 
+function azClassGameObject:getColorRGB ()
+	return self.color.r * 255.0, self.color.g * 255.0, self.color.b * 255.0, self.color.a * 100 
+end
+
 function azClassGameObject:getAlpha ()
 	return self:getColor ().a
 end

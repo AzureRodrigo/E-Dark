@@ -27,7 +27,7 @@ function onUpdate ( frameTime )
 		elseif accel_x < -2 then
 			nx = 1
 			sx = 1
-		else --if accel_x > -1.5 and accel_x < 1.5 then
+		else
 			sx = nx
 			nx = 0
 		end
@@ -38,7 +38,7 @@ function onUpdate ( frameTime )
 		elseif accel_y < -2.5 then
 			ny = -1
 			sy = -1
-		else --if accel_y > -0.5 and accel_y < -0.1 then
+		else
 			sy = ny
 			ny = 0
 		end
@@ -108,6 +108,10 @@ function onCollision ( objA, objB, type )
 					else
 						G.effect_damage:play ()
 						g.count = 0
+						self:setColor ( objB:getColorRGB () )
+						self:addEvent ( 150, function ()
+							self:setColor ( 255, 255, 255, 100 )
+						end )
 						g.score:setText ("score: "..g.count)
 					end
 				end

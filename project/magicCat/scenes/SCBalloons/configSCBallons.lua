@@ -17,8 +17,8 @@ function setVariables ()
 		math.random ( 3 )
 	}
 	
-	G.effect_knife   = scene:addSound ( "eff_knife" )
-	G.effect_explode = scene:addSound ( "eff_explode" )
+	if G.effect_knife   == nil then G.effect_knife   = scene:addSound ( "eff_knife" )   end
+	if G.effect_explode == nil then G.effect_explode = scene:addSound ( "eff_explode" ) end
 
 end
 

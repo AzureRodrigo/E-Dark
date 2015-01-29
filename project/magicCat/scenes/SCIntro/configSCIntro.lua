@@ -1,12 +1,13 @@
 function setVariables ()
 	g.finish = false
 	g.start  = false
-	G.effect_btn     = scene:addSound ( "eff_btn" )
-	G.effect_cat     = scene:addSound ( "eff_cat" )
-	G.effect_damage  = scene:addSound ( "eff_damage" )
-	G.effect_fall    = scene:addSound ( "eff_fall" )
-	G.effect_knife   = scene:addSound ( "eff_knife" )
-	g.ost    = scene:addSound ( "intro" )	
+	if G.effect_btn    == nil then G.effect_btn     = scene:addSound ( "eff_btn" )    end
+	if G.effect_cat    == nil then G.effect_cat     = scene:addSound ( "eff_cat" )	  G.effect_cat:setVolume    ( 60 ) end
+	if G.effect_damage == nil then G.effect_damage  = scene:addSound ( "eff_damage" ) G.effect_damage:setVolume ( 60 ) end
+	if G.effect_fall   == nil then G.effect_fall    = scene:addSound ( "eff_fall" )   G.effect_fall:setVolume   ( 60 ) end
+	if G.effect_knife  == nil then G.effect_knife   = scene:addSound ( "eff_knife" )  end
+	
+	g.ost = scene:addSound ( "intro" )	
 	g.ost:setLoop ( true )
 	g.ost:setVolume ( 0 )
 	g.ost:play ()

@@ -28,11 +28,4 @@ function setDefault ()
     Bit.Category_16 = 0x8000 --[[1000 0000 0000 0000]]
 end
 
-function G.SaveReset ()
-    G.Save = {
-
-    }
-end
-
 setDefault ()
-G.SaveReset ()

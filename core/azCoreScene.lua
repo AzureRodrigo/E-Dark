@@ -254,7 +254,7 @@ function azSceneClass:internalAccelerometer ( z, x, y )
 	local listObjects = azCoreGame:gatherAllThings ()
 	for _, object in ipairs ( listObjects ) do
 		if object.onAccelerometer ~= nil then
-			executeAccelerometer ( object, x, y, z )
+			executeAccelerometer ( object, z, x, y )
 		end
 	end
 end

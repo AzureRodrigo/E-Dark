@@ -10,7 +10,7 @@ projectConfig = {
 	landscape 	  = true,
 	maxLayers     = 10,
 	layersToPause = { 1, 2, 3, 4, 5, 6, 7, 8 },
-	defaultFont   = "ArialRounded",
+	defaultFont   = "Anatole",
 	playReload	  = false,
 	openScene 	  = "SCIntro"--"SCIntro""SCBalloons""SCIntro""SCMeteor"
 }

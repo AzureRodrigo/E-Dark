@@ -1,22 +1,22 @@
 sounds = {
 	['meteor'] = {
-	 	fileName = 'faseI.wav',
+	 	fileName = 'faseI.ogg',
 	 	loop = true,
 	},
 	['baloon'] = {
-	 	fileName = 'faseII.wav',
+	 	fileName = 'faseII.ogg',
 	 	loop = true,
 	},
 	['credits'] = {
-	 	fileName = 'credits.wav',
+	 	fileName = 'credits.ogg',
 	 	loop = true,
 	},
 	['intro'] = {
-	 	fileName = 'terror.wav',
+	 	fileName = 'terror.ogg',
 	 	loop = true,
 	},
 	['eff_btn'] = {
-	 	fileName = 'effects/btn.wav',
+	 	fileName = 'effects/btn.ogg',
 	 	loop = false,
 	},
 	['eff_cat'] = {
@@ -24,19 +24,19 @@ sounds = {
 	 	loop = false,
 	},
 	['eff_damage'] = {
-	 	fileName = 'effects/damage.wav',
+	 	fileName = 'effects/damage.ogg',
 	 	loop = false,
 	},
 	['eff_explode'] = {
-	 	fileName = 'effects/explode.wav',
+	 	fileName = 'effects/explode.ogg',
 	 	loop = false,
 	},
 	['eff_fall'] = {
-	 	fileName = 'effects/fall.wav',
+	 	fileName = 'effects/fall.ogg',
 	 	loop = false,
 	},
 	['eff_knife'] = {
-	 	fileName = 'effects/knife.wav',
+	 	fileName = 'effects/knife.ogg',
 	 	loop = false,
 	},
 }
